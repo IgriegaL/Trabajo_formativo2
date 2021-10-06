@@ -77,37 +77,30 @@ public class Instagram extends Red_Social{
 //                System.out.println("Historias SubidaS:");
 //            }  
 //        }
+        System.out.println("Bienvenido a Instagram " + this.getUsuario());
+
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         int opcion; //Guardaremos la opcion del usuario
  
         while (!salir) {
- 
-            System.out.println("1. Opcion 1");
-            System.out.println("2. Opcion 2");
-            System.out.println("3. Opcion 3");
-            System.out.println("4. Salir");
- 
+            System.out.println("Qué Acción quieres hacer? \n 1.- Subir una historia \n 2.- Subir un estado");
+            List<String> InstaLista = new ArrayList<>();
+            List<String> EstadoLista = new ArrayList<>();
             try {
- 
-                System.out.println("Escribe una de las opciones");
                 opcion = sn.nextInt();
  
                 switch (opcion) {
-                    case 1:
+                    case 1 -> {
                         System.out.println("Has seleccionado la opcion 1");
-                        break;
-                    case 2:
-                        System.out.println("Has seleccionado la opcion 2");
-                        break;
-                    case 3:
-                        System.out.println("Has seleccionado la opcion 3");
-                        break;
-                    case 4:
-                        salir = true;
-                        break;
-                    default:
-                        System.out.println("Solo números entre 1 y 4");
+                        System.out.println("Escriba la Historia que subirá:");
+                        String historia1 = sn.nextLine();
+                        InstaLista.add(historia1);
+                    }
+                    case 2 -> System.out.println("Has seleccionado la opcion 2");
+                    case 3 -> System.out.println("Has seleccionado la opcion 3");
+                    case 4 -> salir = true;
+                    default -> System.out.println("Solo números entre 1 y 4");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un número");
