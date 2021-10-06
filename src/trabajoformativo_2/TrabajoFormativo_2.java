@@ -21,6 +21,7 @@ public class TrabajoFormativo_2 {
     public static void main(String[] args) {
             Red_Social rs1 = new Red_Social();
             Instagram insta1 = new Instagram();
+            Twitter tw1 = new Twitter();
             
             List<String> InstaLista = new ArrayList<>();
             List<String> EstadoLista = new ArrayList<>();
@@ -61,6 +62,15 @@ public class TrabajoFormativo_2 {
                             }
                         }
                     }//final-if-1
+                if (opcion == 2) {
+                    System.out.println("Has seleccionado la opcion 2");
+                    System.out.println("Bienvenido a Twitter");
+                    System.out.println("Escriba su usuario");
+//                    String usuario = sc.nextLine();
+//                    tw1.setUsuario(usuario);
+
+                    
+                }
                 if (opcion == 5) {
                     salir=true;
                 }
