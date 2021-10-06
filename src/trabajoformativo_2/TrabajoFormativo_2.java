@@ -37,38 +37,48 @@ public class TrabajoFormativo_2 {
             boolean salir = false;
             int opcion; //Guardaremos la opcion del usuario
 
-            while (!salir) {
-
-                try {
-
-                    System.out.println("Escribe una de las opciones");
-                    opcion = sn.nextInt();
-
-                    switch (opcion) {
-                        case 1:
-                            System.out.println("Has seleccionado la opcion 1, Escriba la Historia que desea subir:");
-                            String story = sc.next();
-                            InstaLista.add(story);
-                            System.out.println("Usted ha subido la siguiente historia con exito: "+InstaLista);
-                            break;
-                        case 2:
-                            System.out.println("Has seleccionado la opcion 2");
-                            break;
-                        case 3:
-                            System.out.println("Has seleccionado la opcion 3");
-                            break;
-                        case 4:
-                            salir = true;
-                            break;
-                        default:
-                            System.out.println("Solo números entre 1 y 4");
+//            while (!salir) {
+//
+//                try {
+//
+//                    System.out.println("Escribe una de las opciones");
+//                    opcion = sn.nextInt();
+//
+//                    switch (opcion) {
+//                        case 1:
+//                            System.out.println("Has seleccionado la opcion 1, Escriba la Historia que desea subir:");
+//                            String story = sc.next();
+//                            InstaLista.add(story);
+//                            System.out.println("Usted ha subido la siguiente historia con exito:" + InstaLista);
+//                            break;
+//                        case 2:
+//                            System.out.println("Has seleccionado la opcion 2");
+//                            break;
+//                        case 3:
+//                            System.out.println("Has seleccionado la opcion 3");
+//                            break;
+//                        case 4:
+//                            salir = true;
+//                            break;
+//                        default:
+//                            System.out.println("Solo números entre 1 y 4");
+//                    }
+//                } catch (InputMismatchException e) {
+//                    System.out.println("Debes insertar un número");
+//                    sn.next();
+//                }
+//            }
+            while(!salir){
+            System.out.println("Escribe una de las opciones");
+            opcion = sn.nextInt();
+                if (opcion == 1) {
+                    System.out.println("Has seleccionado la opcion 1, Escriba la Historia que desea subir:");
+                    String story = sc.next();
+                    InstaLista.add(story);
+                    System.out.println("Usted ha subido la siguiente historia con exito:" + InstaLista);
                     }
-                } catch (InputMismatchException e) {
-                    System.out.println("Debes insertar un número");
-                    sn.next();
-                }
-            }
             
+            }
             
             System.out.println("Muchas gracias por preferir Red Social");
 
