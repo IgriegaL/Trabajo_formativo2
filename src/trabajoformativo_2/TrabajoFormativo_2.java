@@ -42,13 +42,19 @@ public class TrabajoFormativo_2 {
                     insta1.setUsuario(usuario);
                     System.out.println("Bienvenido " + insta1.getUsuario());
                         while(!salir2){
-                            System.out.println("1.Subir una historia 2.Subir un post 3.volver al home");
+                            System.out.println("1.Subir una historia 2.Subir un estado 3.volver al home");
                         opcion = sn.nextInt();
                             if (opcion == 1) {
                             System.out.println("Escriba historia a subir");
                             String story = sn.next();
                             InstaLista.add(story);
                             System.out.println("Usted ha subido la siguiente historia con exito:" + InstaLista);
+                            }
+                            if (opcion == 2) {
+                                System.out.println("Escriba el estado a subir");
+                                String story = sn.next();
+                                EstadoLista.add(story);
+                                System.out.println("Usted ha subido el siguiente estado con exito:" + EstadoLista);
                             }
                             if (opcion == 3) {
                                 salir2=true;
