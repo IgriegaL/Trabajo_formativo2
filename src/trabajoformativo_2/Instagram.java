@@ -91,16 +91,23 @@ public class Instagram extends Red_Social{
                 opcion = sn.nextInt();
  
                 switch (opcion) {
-                    case 1 -> {
+                    case 1:
                         System.out.println("Has seleccionado la opcion 1");
-                        System.out.println("Escriba la Historia que subirá:");
-                        String historia1 = sn.nextLine();
-                        InstaLista.add(historia1);
-                    }
-                    case 2 -> System.out.println("Has seleccionado la opcion 2");
-                    case 3 -> System.out.println("Has seleccionado la opcion 3");
-                    case 4 -> salir = true;
-                    default -> System.out.println("Solo números entre 1 y 4");
+                            System.out.println("Escriba la Historia que subirá:");
+                            String historia1 = sn.nextLine();            
+                            InstaLista.add(historia1);
+                            break;
+                    case 2:
+                        System.out.println("Has seleccionado la opcion 2");
+                        break;
+                    case 3:
+                        System.out.println("Has seleccionado la opcion 3");
+                        break;
+                    case 4:
+                        salir = true;
+                        break;
+                    default:
+                        System.out.println("Solo números entre 1 y 4");
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Debes insertar un número");
