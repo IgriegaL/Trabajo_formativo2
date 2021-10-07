@@ -36,7 +36,9 @@ public class Red_Social {
     public void setPassword(int Password) {
         this.Password = Password;
     }
-    
+    public void Bienvenidos(){
+        System.out.println("Bienvenidos a Red Social");
+    }
     
     
 }

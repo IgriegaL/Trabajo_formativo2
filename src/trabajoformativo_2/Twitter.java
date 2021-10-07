@@ -46,7 +46,9 @@ public class Twitter extends Red_Social {
     public void setDate(int date) {
         this.date = date;
     }
-    
+    public void Bienvenidos(){
+        System.out.println("Bienvenidos a Twitter: " + getUsuario());
+    }
     
     
     

@@ -52,6 +52,10 @@ public class Instagram extends Red_Social{
     public void setEstado(String estado) {
         this.estado = estado;
     }
+    @Override
+    public void Bienvenidos(){
+        System.out.println("Bienvenidos a Instagram: " + getUsuario());
+    }
     
     public void instagramUso() {
         System.out.println("Bienvenido a Instagram " + this.getUsuario());

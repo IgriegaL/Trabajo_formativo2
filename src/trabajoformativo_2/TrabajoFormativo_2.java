@@ -25,7 +25,8 @@ public class TrabajoFormativo_2 {
             
             List<String> InstaLista = new ArrayList<>();
             List<String> EstadoLista = new ArrayList<>();
-            System.out.println("Bienvenido a la Red Social");
+            List<String> TwitterNoticiaLista = new ArrayList<>();
+            rs1.Bienvenidos();
             
             Scanner sn = new Scanner(System.in);
             boolean salir = false;
@@ -41,7 +42,7 @@ public class TrabajoFormativo_2 {
                     System.out.println("Escriba su nuevo usuario");
                     String usuario = sc.nextLine();
                     insta1.setUsuario(usuario);
-                    System.out.println("Bienvenido " + insta1.getUsuario());
+                    insta1.Bienvenidos();
                         while(!salir2){
                             System.out.println("1.Subir una historia 2.Subir un estado 3.volver al home");
                         opcion = sn.nextInt();
@@ -64,12 +65,24 @@ public class TrabajoFormativo_2 {
                     }//final-if-1
                 if (opcion == 2) {
                     System.out.println("Has seleccionado la opcion 2");
-                    System.out.println("Bienvenido a Twitter");
-                    System.out.println("Escriba su usuario");
-//                    String usuario = sc.nextLine();
-//                    tw1.setUsuario(usuario);
-
-                    
+                    Scanner sc = new Scanner(System.in);
+                    System.out.println("Escriba su nuevo usuario para ingresar a Twitter");
+                    String usuario = sc.nextLine();
+                    tw1.setUsuario(usuario);
+                    tw1.Bienvenidos();
+                        while(!salir2){
+                            System.out.println("1.Subir una noticia 3.volver al home");
+                            opcion = sn.nextInt();
+                            if (opcion == 1) {
+                                System.out.println("Escriba la noticia a subir");
+                                String story = sn.next();
+                                TwitterNoticiaLista.add(story);
+                                System.out.println("Usted ha subido la siguiente historia con exito:" + TwitterNoticiaLista);
+                            }
+                            if (opcion == 3) {
+                                salir2=true;
+                            }
+                        }  
                 }
                 if (opcion == 5) {
                     salir=true;
